@@ -8,3 +8,9 @@ Several variations of logistics models (from ISE 754 at NCSU) are given in this 
 - [(pCP)](https://github.com/TheEric960/logistics-models/tree/main/pCP) p-Center Problem
 - [(pMP)](https://github.com/TheEric960/logistics-models/tree/main/pMP) p-Median Problem
 
+<br>
+
+Notes
+- The `.ipynb` files render differently in GitHub. This may result in latex formulas looking slightly off.
+- Note that GitHub does not support `README.ipynb` files at the moment. For them to render more properly, navigate to the file. 
+
