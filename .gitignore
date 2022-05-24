@@ -1,3 +1,9 @@
+# Batch
+*.bat
+
 # Folders
 .ipynb_checkpoints/
+
+# Jupyter
+README.ipynb
 
