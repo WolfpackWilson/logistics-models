@@ -5,6 +5,7 @@ Several variations of logistics models (from ISE 754 at NCSU) are given in this 
 - [(MCLP)](https://github.com/TheEric960/logistics-models/tree/main/MCLP) Maximum Covering Location Problem
 - [(SCLP)](https://github.com/TheEric960/logistics-models/tree/main/SCLP) Set-Covering Location Models
 - [(UFLP)](https://github.com/TheEric960/logistics-models/tree/main/UFLP) Uncapacitated Fixed-Charge Location Problem
+- [(NDP)](https://github.com/TheEric960/logistics-models/tree/main/NDP) Node Design Problem
 - [(pCP)](https://github.com/TheEric960/logistics-models/tree/main/pCP) p-Center Problem
 - [(pMP)](https://github.com/TheEric960/logistics-models/tree/main/pMP) p-Median Problem
 
