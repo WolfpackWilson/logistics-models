@@ -1,5 +1,5 @@
 ### Discreet Location Models
-Discreet location models refer to models that locate facility locations.
+Discreet location models refer to models that locate optimal facility locations.
 
 - [(CFLP)](https://github.com/TheEric960/logistics-models/tree/main/Discreet%20Location%20Models/CFLP) Capacitated Fixed-Charge Location Problem
 - [(MCLP)](https://github.com/TheEric960/logistics-models/tree/main/Discreet%20Location%20Models/MCLP) Maximum Covering Location Problem

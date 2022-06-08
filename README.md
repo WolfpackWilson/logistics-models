@@ -9,6 +9,8 @@ Several variations of logistics models (from ISE 754 at NCSU) are given in this 
     - [(NDP)](https://github.com/TheEric960/logistics-models/tree/main/Discreet%20Location%20Models/NDP) Node Design Problem
     - [(pCP)](https://github.com/TheEric960/logistics-models/tree/main/Discreet%20Location%20Models/pCP) p-Center Problem
     - [(pMP)](https://github.com/TheEric960/logistics-models/tree/main/Discreet%20Location%20Models/pMP) p-Median Problem
+- Network Models - minimize pathing
+    - [(NTP)](https://github.com/TheEric960/logistics-models/tree/main/Network%20Models/NTP) Network Transportation Problem
 
 <br>
 
