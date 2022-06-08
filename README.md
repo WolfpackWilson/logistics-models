@@ -1,13 +1,16 @@
 ### Logistics Models
 Several variations of logistics models (from ISE 754 at NCSU) are given in this repository. Each folder contains the model as well as some randomly generated test data. The following models are covered (click to find out more about each):
 
-- [(CFLP)](https://github.com/TheEric960/logistics-models/tree/main/CFLP) Capacitated Fixed-Charge Location Problem
-- [(MCLP)](https://github.com/TheEric960/logistics-models/tree/main/MCLP) Maximum Covering Location Problem
-- [(SCLP)](https://github.com/TheEric960/logistics-models/tree/main/SCLP) Set-Covering Location Models
-- [(UFLP)](https://github.com/TheEric960/logistics-models/tree/main/UFLP) Uncapacitated Fixed-Charge Location Problem
-- [(NDP)](https://github.com/TheEric960/logistics-models/tree/main/NDP) Node Design Problem
-- [(pCP)](https://github.com/TheEric960/logistics-models/tree/main/pCP) p-Center Problem
-- [(pMP)](https://github.com/TheEric960/logistics-models/tree/main/pMP) p-Median Problem
+- Discreet Location Models - facility locating models
+    - [(CFLP)](https://github.com/TheEric960/logistics-models/tree/main/Discreet%20Location%20Models/CFLP) Capacitated Fixed-Charge Location Problem
+    - [(MCLP)](https://github.com/TheEric960/logistics-models/tree/main/Discreet%20Location%20Models/MCLP) Maximum Covering Location Problem
+    - [(SCLP)](https://github.com/TheEric960/logistics-models/tree/main/Discreet%20Location%20Models/SCLP) Set-Covering Location Models
+    - [(UFLP)](https://github.com/TheEric960/logistics-models/tree/main/Discreet%20Location%20Models/UFLP) Uncapacitated Fixed-Charge Location Problem
+    - [(NDP)](https://github.com/TheEric960/logistics-models/tree/main/Discreet%20Location%20Models/NDP) Node Design Problem
+    - [(pCP)](https://github.com/TheEric960/logistics-models/tree/main/Discreet%20Location%20Models/pCP) p-Center Problem
+    - [(pMP)](https://github.com/TheEric960/logistics-models/tree/main/Discreet%20Location%20Models/pMP) p-Median Problem
+- Network Models - minimize pathing
+    - [(NTP)](https://github.com/TheEric960/logistics-models/tree/main/Network%20Models/NTP) Network Transportation Problem
 
 <br>
 
