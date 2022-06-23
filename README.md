@@ -13,6 +13,7 @@ Several variations of logistics models (from ISE 754 at NCSU) are given in this 
     - [(TSP)](https://github.com/TheEric960/logistics-models/tree/main/Distribution%20Models/TSP) Traveling Salesman Problem
 - Network Models - minimize distances from one point to another
     - [(NTP)](https://github.com/TheEric960/logistics-models/tree/main/Network%20Models/NTP) Network Transportation Problem
+    - [(SPP)](https://github.com/TheEric960/logistics-models/tree/main/Network%20Models/SPP) Shortest Path Problem
 
 <br>
 
