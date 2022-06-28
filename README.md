@@ -11,6 +11,7 @@ Several variations of logistics models (from ISE 754 at NCSU) are given in this 
     - [(pMP)](https://github.com/TheEric960/logistics-models/tree/main/Discreet%20Location%20Models/pMP) p-Median Problem
 - Distribution Models - minimize looping routes
     - [(TSP)](https://github.com/TheEric960/logistics-models/tree/main/Distribution%20Models/TSP) Traveling Salesman Problem
+    - [(VRP)](https://github.com/TheEric960/logistics-models/tree/main/Distribution%20Models/VRP) Vehicle Routing Problem
 - Network Models - minimize distances from one point to another
     - [(NTP)](https://github.com/TheEric960/logistics-models/tree/main/Network%20Models/NTP) Network Transportation Problem
     - [(SPP)](https://github.com/TheEric960/logistics-models/tree/main/Network%20Models/SPP) Shortest Path Problem
