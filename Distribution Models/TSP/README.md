@@ -15,7 +15,7 @@ $$
 \begin{split}
 \text{(TSP)}\quad & \text{minimize}\quad \sum\limits_{i,j\in N}c_{ij}x_{ij}\\
 &\begin{split}
-\text{subject to}\quad\quad \sum\limits_{i\in N}&x_{ih}\le +\sum\limits_{j\in N}x_{hj}\quad\quad &\forall h\in N\\
+\text{subject to}\quad\quad \sum\limits_{i\in N}&x_{ih}+\sum\limits_{j\in N}x_{hj}=2 \quad\quad &\forall h\in N\\
    \sum\limits_{i,j\in S}&x_{ij}\le |S|-1 &\forall S\subseteq N: 2\le |S|\le n-1\\
         &x_{ij}\in \{0,1\}     &\forall i,j\in N\\ 
 \end{split}
