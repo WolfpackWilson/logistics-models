@@ -14,7 +14,7 @@
 
 $$
 \begin{split}
-\text{(TP)}\quad & \text{minimize}\quad \sum\limits_{i\in I}\sum\limits_{j\in J}c_{ij}X_{ij}\\
+\text{(NTP)}\quad & \text{minimize}\quad \sum\limits_{i\in I}\sum\limits_{j\in J}c_{ij}X_{ij}\\
 &\begin{split}
 \text{subject to}\quad\quad \sum\limits_{j\in J}&X_{ij}\le S_{i} &\forall i\in I\\
    \sum\limits_{i\in I}&X_{ij}\ge D_{j} \quad\quad&\forall j\in J\\
