@@ -228,7 +228,7 @@ class NTP:
         self.mk_img(supplies, demands, 'Supply', 'Demand')
         self.steps = [{
             'img': self.img,
-            'text': 'Initialize'
+            'text': 'Initialize the problem.'
         }]
 
         self.solution = {'solved': False}
@@ -320,6 +320,7 @@ class NTP:
         """Perform the northwest corner method to begin the heuristic."""
         supplies = self.supplies
         demands = self.demands
+        basic = []
 
         row = 0
         for col in range(self.grid.shape[1]):
@@ -333,8 +334,10 @@ class NTP:
                     demands[col] -= supplies[row]
                     supplies[row] = 0
                     row += 1
+                basic.append((row, col))
 
-        self._save_step(supplies, demands, 'Supply', 'Demand', 'Northwest method')
+        self.obj_value = sum(self.grid[cell].cost * self.grid[cell].value for cell in basic)
+        self._save_step(supplies, demands, 'Supply', 'Demand', 'Northwest corner method.')
 
     def _solve_step(self):
         """Populate the grid with values"""
@@ -354,26 +357,6 @@ class NTP:
             costs=[self.costs[cell] for cell in basic])
         )
 
-        # find objective value and terminate if it is not improving
-        old_value = self.obj_value
-        self.obj_value = sum(self.grid[cell].cost * self.grid[cell].value for cell in basic)
-        self.solution['obj_value'] = self.obj_value
-
-        if self.obj_value >= old_value:
-            self.mk_img(
-                ['' for _ in range(len(self.supplies))],
-                ['' for _ in range(len(self.demands))],
-                '',
-                '',
-            )
-            self.steps[-1]['img'] = self.img
-
-            error = 'Infeasible using this heuristic.'
-            print(error)
-            self.solution.update(dict(error=error))
-
-            return 0
-
         # calculate Vs and Ws
         v, w = self._calc_vw(basic)
         self.solution['v'] = v
@@ -385,7 +368,7 @@ class NTP:
             self.solution.update(dict(error=error))
 
             return 0
-        self._save_step(v, w, 'Vi', 'Wj', 'Solve for Vs and Ws')
+        self._save_step(v, w, 'Vi', 'Wj', 'Solve for Vs and Ws.')
 
         # calculate slack values and circle them
         min_slack, min_value = self._calc_slack(slack, v, w)
@@ -403,14 +386,36 @@ class NTP:
         self._save_step(v, w, 'Vi', 'Wj', 'Find the optimal path starting from the lowest slack variable.')
 
         # redistribute values along the path
-        self._update_grid(path, basic)
+        new_basic = self._update_grid(path, basic)
+
+        # find objective value
+        old_value = self.obj_value
+        self.obj_value = sum(self.grid[cell].cost * self.grid[cell].value for cell in new_basic)
+        self.solution['obj_value'] = self.obj_value
+
         self._save_step(
             ['' for _ in range(len(v))],
             ['' for _ in range(len(w))],
             '',
             '',
-            'Find the smallest basic variable and then add and subtract it across the path.'
+            'Find the smallest subtractive basic variable on the path and distribute it along the path.'
         )
+
+        # terminate if objective value is not improving
+        if self.obj_value >= old_value:
+            self.mk_img(
+                ['' for _ in range(len(self.supplies))],
+                ['' for _ in range(len(self.demands))],
+                '',
+                '',
+            )
+            self.steps[-1]['img'] = self.img
+
+            error = 'Infeasible using this heuristic.'
+            print(error)
+            self.solution.update(dict(error=error))
+
+            return 0
 
         return 1
 
@@ -488,7 +493,9 @@ class NTP:
                         return result
 
     def _update_grid(self, path, basic):
-        """Find the smallest basic variable and then add and subtract it across the path."""
+        """Find the smallest subtractive basic variable on the path and distribute it along the path. Return the set of
+        new basic variables.
+        """
         min_value = INF
         for i in range(len(path) - 1):
             value = self.grid[path[i]].value
@@ -499,9 +506,11 @@ class NTP:
         grid = Grid(self.costs)
         self.grid.reset()
 
+        new_basic = []
         for cell in basic:
             if cell not in path:
                 grid[cell].value = self.grid[cell].value
+                new_basic.append(cell)
 
         for i in range(len(path))[1:-1]:
             cell = path[i]
@@ -509,11 +518,14 @@ class NTP:
 
             if value > 0:
                 grid[cell].value = value
+                new_basic.append(cell)
 
         grid[path[0]].value = min_value
+        new_basic.append(path[0])
 
         self.grid = grid
         self.grid.mk_img()
+        return new_basic
 
     def plot(self, i_coord, j_coord):
         """Plot the NTP solution."""
@@ -564,7 +576,8 @@ def _gen_data(size: tuple, supply_min: int, supply_max: int, coord_bound: int = 
     i_len, j_len = size
 
     def rcoord(nb): return r.randrange(-nb, nb + 1)
-    def eucl(x1, x2, y1, y2): return ((x1 - x2)**2 + (y1 - y2)**2)**0.5
+
+    def eucl(x1, x2, y1, y2): return ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5
 
     # add supply
     i_data = pd.DataFrame()
@@ -626,4 +639,3 @@ if __name__ == '__main__':
     p.plot(i_data, j_data)
 
     print('Done')
-
