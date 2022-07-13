@@ -2,6 +2,7 @@
 *.bat
 
 # Folders
+.idea/
 .ipynb_checkpoints/
 
 # Jupyter
