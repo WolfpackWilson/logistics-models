@@ -2,19 +2,19 @@
 Several variations of logistics models (from ISE 754 at NCSU) are given in this repository. Each folder contains the model as well as some randomly generated test data. The following models are covered (click to find out more about each):
 
 - Discreet Location Models - facility locating models
-    - [(CFLP)](https://github.com/TheEric960/logistics-models/tree/main/Discreet%20Location%20Models/CFLP) Capacitated Fixed-Charge Location Problem
-    - [(MCLP)](https://github.com/TheEric960/logistics-models/tree/main/Discreet%20Location%20Models/MCLP) Maximum Covering Location Problem
-    - [(SCLP)](https://github.com/TheEric960/logistics-models/tree/main/Discreet%20Location%20Models/SCLP) Set-Covering Location Models
-    - [(UFLP)](https://github.com/TheEric960/logistics-models/tree/main/Discreet%20Location%20Models/UFLP) Uncapacitated Fixed-Charge Location Problem
-    - [(NDP)](https://github.com/TheEric960/logistics-models/tree/main/Discreet%20Location%20Models/NDP) Node Design Problem
-    - [(pCP)](https://github.com/TheEric960/logistics-models/tree/main/Discreet%20Location%20Models/pCP) p-Center Problem
-    - [(pMP)](https://github.com/TheEric960/logistics-models/tree/main/Discreet%20Location%20Models/pMP) p-Median Problem
+    - [(CFLP)](https://github.com/WolfpackWilson/logistics-models/tree/main/Discreet%20Location%20Models/CFLP) Capacitated Fixed-Charge Location Problem
+    - [(MCLP)](https://github.com/WolfpackWilson/logistics-models/tree/main/Discreet%20Location%20Models/MCLP) Maximum Covering Location Problem
+    - [(SCLP)](https://github.com/WolfpackWilson/logistics-models/tree/main/Discreet%20Location%20Models/SCLP) Set-Covering Location Models
+    - [(UFLP)](https://github.com/WolfpackWilson/logistics-models/tree/main/Discreet%20Location%20Models/UFLP) Uncapacitated Fixed-Charge Location Problem
+    - [(NDP)](https://github.com/WolfpackWilson/logistics-models/tree/main/Discreet%20Location%20Models/NDP) Node Design Problem
+    - [(pCP)](https://github.com/WolfpackWilson/logistics-models/tree/main/Discreet%20Location%20Models/pCP) p-Center Problem
+    - [(pMP)](https://github.com/WolfpackWilson/logistics-models/tree/main/Discreet%20Location%20Models/pMP) p-Median Problem
 - Distribution Models - minimize looping routes
-    - [(TSP)](https://github.com/TheEric960/logistics-models/tree/main/Distribution%20Models/TSP) Traveling Salesman Problem
-    - [(VRP)](https://github.com/TheEric960/logistics-models/tree/main/Distribution%20Models/VRP) Vehicle Routing Problem
+    - [(TSP)](https://github.com/WolfpackWilson/logistics-models/tree/main/Distribution%20Models/TSP) Traveling Salesman Problem
+    - [(VRP)](https://github.com/WolfpackWilson/logistics-models/tree/main/Distribution%20Models/VRP) Vehicle Routing Problem
 - Network Models - minimize distances from one point to another
-    - [(NTP)](https://github.com/TheEric960/logistics-models/tree/main/Network%20Models/NTP) Network Transportation Problem
-    - [(SPP)](https://github.com/TheEric960/logistics-models/tree/main/Network%20Models/SPP) Shortest Path Problem
+    - [(NTP)](https://github.com/WolfpackWilson/logistics-models/tree/main/Network%20Models/NTP) Network Transportation Problem
+    - [(SPP)](https://github.com/WolfpackWilson/logistics-models/tree/main/Network%20Models/SPP) Shortest Path Problem
 
 <br>
 
